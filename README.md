@@ -1,0 +1,1 @@
+That was a simple app where you can find your contact and modify it.
