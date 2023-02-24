@@ -11,7 +11,7 @@ app.use('/', express.static('build'))
 app.use('/about', express.static('build'))
 app.use('/studies', express.static('build'))
 app.use('/projects', express.static('build'))
-app.use('/travels', express.static('build'))
+app.use('/activities', express.static('build'))
 
 app.use(express.json())
 
