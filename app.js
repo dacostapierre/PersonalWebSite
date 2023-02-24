@@ -7,13 +7,16 @@ require('express-async-errors')
 const middleware = require('./utils/middleware')
 
 app.use(cors())
-app.use(express.static('build'))
+app.use('/', express.static('build'))
+app.use('/about', express.static('build'))
+app.use('/studies', express.static('build'))
+app.use('/projects', express.static('build'))
+app.use('/travels', express.static('build'))
+
 app.use(express.json())
 
 if(process.env.NODE_ENV === 'development')
   app.use(middleware.requestLogger)
-
-
 
 app.use(middleware.unknownEndpoint)
 app.use(middleware.errorHandler)
